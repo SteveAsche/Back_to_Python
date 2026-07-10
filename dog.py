@@ -13,3 +13,16 @@ class Dog():
         """ Simulate rolling over in response to a command. """
         print(self.name.title() + " rolled over!")
         
+    def bark(self):
+        """ Simulate a dog barking in response to a command. """
+        print(self.name.title() + '"woof woof!"')
+
+
+my_dog = Dog('Rudi', 11)
+my_dog.bark()
+my_dog.roll_over()
+jasper = Dog('Jasper', 11)
+jasper.sit()
+
+
+
