@@ -9,6 +9,8 @@ class Restaurant:
         self.cuisine_type = cuisine_type
         self.opening_time = opening_time
         self.closing_time = closing_time
+        self.number_served = 0
+
 
 
     def describe_restaurant(self):
@@ -26,10 +28,24 @@ class Restaurant:
         else:
             print(f"{self.restaurant_name} is currently closed.")
 
+    def set_number_served(self, number):
+        """Set the number of customers served."""
+        if number >= 0:
+            self.number_served = number
+        else:
+            print("Number served cannot be negative.")
+
+    def increment_number_served(self, additional_customers):
+        """Increment the number of customers served."""
+        if additional_customers >= 0:
+            self.number_served += additional_customers
+        else:
+            print("Additional customers cannot be negative.")
+
 Max = Restaurant('Max', 'Italian', 11, 22)
 Albertos = Restaurant('Albertos', 'Mexican', 10, 23)
 Sidetracks = Restaurant('Sidetracks', 'American', 9, 21)
 Baci = Restaurant('Baci', 'Italian', 12, 23)
 Haps = Restaurant('Haps', 'American', 11, 22)
 
-Haps.are_they_open(12)  # Check if Haps is open at 12 PM
+#Haps.are_they_open(12)  # Check if Haps is open at 12 PM
